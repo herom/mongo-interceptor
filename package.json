@@ -1,8 +1,29 @@
 {
   "name": "mongo-interceptor",
+  "description": "MongoDB operator escaping, prevent NoSQL-injections",
   "version": "0.0.1",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "homepage": "https://github.com/herom/mongo-interceptor",
+  "bugs": "https://github.com/herom/mongo-interceptor/issues",
+  "repository": "git@github.com:herom/mongo-interceptor.git",
+  "author": {
+    "name": "Heinz Romirer (@herom)"
+  },
+  "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0"
-  }
+  },
+  "keywords": [
+    "mongo",
+    "mongodb",
+    "mongo-db",
+    "nosql",
+    "nosql-injection",
+    "injection",
+    "owasp",
+    "intrusion-detection"
+  ]
 }

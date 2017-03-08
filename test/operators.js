@@ -26,4 +26,8 @@ describe('MongoDB Operators Lib Tests', function () {
   it('should reject operator names which don\'t start with a "$"-sign', function () {
     assert.isNotTrue(operators.isOperator('in'), 'the word "in" is a false positive!');
   });
+
+  it('should recognize and reject camelCase operator names', function () {
+    assert.isTrue(operators.isOperator('$elemMatch'), 'camelCase operators are not recognized!');
+  })
 });

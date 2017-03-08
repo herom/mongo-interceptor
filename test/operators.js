@@ -12,18 +12,18 @@ describe('MongoDB Operators Lib Tests', function () {
       }
     });
 
-    chai.equal(ops.length, operatorsCount, 'the operators array contains duplicate operator-names');
+    assert.equal(ops.length, operatorsCount, 'the operators array contains duplicate operator-names');
   });
 
   it('should detect a mongodb operator string',function () {
-    chai.isTrue(operators.isOperator('$where'), 'the $where operator was not detected!');
+    assert.isTrue(operators.isOperator('$where'), 'the $where operator was not detected!');
   });
 
   it('should reject a "false-positive" string which just starts with a "$"-sign', function () {
-    chai.isNotTrue(operators.isOperator('$test'), 'the $test operator is a false positive!');
+    assert.isNotTrue(operators.isOperator('$test'), 'the $test operator is a false positive!');
   });
 
   it('should reject operator names which don\'t start with a "$"-sign', function () {
-    chai.isNotTrue(operators.isOperator('in'), 'the word "in" is a false positive!');
+    assert.isNotTrue(operators.isOperator('in'), 'the word "in" is a false positive!');
   });
 });

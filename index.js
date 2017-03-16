@@ -6,9 +6,5 @@ module.exports = {
 
   check: interceptor.checkStr,
 
-  setReplacer: function setReplacer (replacer) {
-    if (replacer.indexOf('$') === -1) {
-      interceptor.setOperatorReplacer(replacer);
-    }
-  }
+  setReplacer: interceptor.setOperatorReplacer
 };

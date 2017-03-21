@@ -4,7 +4,7 @@ var interceptor = require('./lib/interceptor');
 module.exports = {
   VERSION: version,
 
-  check: interceptor.checkStr,
+    check: interceptor.check,
 
   setReplacer: interceptor.setOperatorReplacer
 };

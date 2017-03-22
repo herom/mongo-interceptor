@@ -17,7 +17,7 @@ You can check any `Object`, `Array`, or `String` for "harmful" `mongoDB` operato
 - `isIntrusion`: The `Boolean` to tell if any `mongoDB` operators where detected and escaped
 - `injections`: The `[String]` if found `mongoDB` operators
 
-See the [interceptor-tests](https://github.com/herom/mongo-interceptor/blob/master/test/interceptor.js#L13-L56) for further information.
+See the [interceptor-tests](https://github.com/herom/mongo-interceptor/blob/master/test/interceptor.js#L5-L56) for further information.
 
 ### `setReplacer()`
 By default, `mongo-interceptor` is using the underscore (`_`) to escape/replace found `mongoDB` operators, but you can set any other replacement `String` you like - excluding `$` itself. 

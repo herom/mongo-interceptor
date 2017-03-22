@@ -11,11 +11,13 @@ Require the package like you always do: `var mongoInterceptor = require('mongo-i
 
 ## Methods
 ### `check()`
-You can check any `String` for "harmful" `mongoDB` operators by calling `mongoInterceptor.checkStr(possibleNOSQLInjectionString)` and you will get an `object` in return, which contains the following information: 
+You can check any `Object`, `Array`, or `String` for "harmful" `mongoDB` operators by calling `mongoInterceptor.checkStr(possibleNOSQLInjectionString)` and you will get an `object` in return, which contains the following information: 
 
 - `escaped`: The escaped `String`
 - `isIntrusion`: The `Boolean` to tell if any `mongoDB` operators where detected and escaped
 - `injections`: The `[String]` if found `mongoDB` operators
+
+See the [interceptor-tests](https://github.com/herom/mongo-interceptor/blob/master/test/interceptor.js#L13-L56) for further information.
 
 ### `setReplacer()`
 By default, `mongo-interceptor` is using the underscore (`_`) to escape/replace found `mongoDB` operators, but you can set any other replacement `String` you like - excluding `$` itself. 

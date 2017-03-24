@@ -68,7 +68,7 @@ describe('MongoDB Interceptor (Intrusion Detection) Tests', function () {
     it('setOperatorReplacer() should accept a "valid" custom replacer string', function () {
         interceptor.setOperatorReplacer('#');
 
-        var info = interceptor._checkStr('this is a $comment replacer');
+        var info = interceptor.check('this is a $comment replacer');
 
         assert.equal(info.escaped.indexOf('#'), 10, 'the previously set operator was not used!');
         assert.equal(info.escaped.indexOf('$'), -1, 'the operator was not removed!');

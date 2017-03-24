@@ -2,9 +2,9 @@ var version = require('./package.json').version;
 var interceptor = require('./lib/interceptor');
 
 module.exports = {
-  VERSION: version,
+    VERSION: version,
 
     check: interceptor.check,
 
-  setReplacer: interceptor.setOperatorReplacer
+    setReplacer: interceptor.setOperatorReplacer
 };

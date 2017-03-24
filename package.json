@@ -1,7 +1,7 @@
 {
   "name": "mongo-interceptor",
   "description": "MongoDB operator escaping, prevent NoSQL-injections",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "scripts": {
     "test": "node_modules/.bin/mocha"
   },
